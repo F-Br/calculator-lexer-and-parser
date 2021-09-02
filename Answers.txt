@@ -1,0 +1,26 @@
+1. 2. 3.
+Assuming parenthesis are also accpeted
+
+
+expr -> expr + term | expr - term | term
+
+term -> factor * term | factor
+
+factor -> cos factor | argmt
+
+argmt -> argmt ! | base
+
+base -> (expr) | signedFloat
+
+signedFloat -> -wholeFloat | wholeFloat
+
+wholeFloat -> digit . pointFloat | digit wholeFloat | digit
+
+pointFloat -> digit PointFloat | digit
+
+digit -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+
+An important note here is that the calculator technically want handle double factorials correctly (in the mathematical sense).
+if it accepts parenthesis then it may reject -(wholeFloat) incorrectly even though this should be the same as signedFloat.
+These production rules are of type 2 and below in Chomsky's heirachy of formal grammars.
